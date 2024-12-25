@@ -1,0 +1,177 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+    background: url('./hRArMfEOiqw.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    height: 100vh; /* Занимает всю высоту экрана */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 8rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.features {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.features h3 {
+    margin-bottom: 20px;
+}
+
+.cta {
+    background: linear-gradient(to bottom, rgba(240, 239, 239, 0.7), rgba(70, 223, 231, 0.7) 30%, rgba(255, 255, 255, 0.7) 70%); /* Градиентный фон */
+    padding: 50px 0;
+}
+
+.cta h2 {
+    margin-bottom: 30px;
+}
+
+.contact {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #343a40;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.cta-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+}
+.neon-button {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #d4f0f9;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.neon-button:hover {
+    background-color: #000;
+    color: #fff;
+}.hero-gif {
+    width: 70px;
+    height: 70px;
+}
+.scale-button {
+    transition: transform 0.3s ease;
+}
+
+.scale-button:hover {
+    transform: scale(1.1);
+}
+
+.custom-prev, .custom-next {
+    background-color: turquoise; /* Замените на желаемый цвет фона */
+}
+
+.custom-prev:hover, .custom-next:hover {
+    background-color: turquoise; /* Цвет фона при наведении */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: white; /* Цвет иконок */
+}
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
+    border-radius: 50%; /* Круглая форма */
+    color: turquoise; /* Цвет иконок */
+    font-size: 2rem; /* Размер иконок */
+    width: 50px; /* Ширина кнопок */
+    height: 50px; /* Высота кнопок */
+    display: flex; /* Центрирование содержимого */
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center; /* Горизонтальное выравнивание */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Цвет фона при наведении */
+    color: turquoise; /* Цвет иконок при наведении */
+}
+.gif-small {
+    max-width: 150px; 
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+/* Пример медиа-запроса для мобильных устройств */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 2rem 1rem; /* Уменьшение отступов на мобильных устройствах */
+    }
+
+    .fade-in {
+        font-size: 1.5rem; /* Уменьшение размера шрифта на мобильных устройствах */
+    }
+}
+
+/* Пример медиа-запроса для планшетов */
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 1rem; /* Увеличение отступов на планшетах */
+    }
+}
